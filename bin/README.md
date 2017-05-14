@@ -1,2 +1,0 @@
-# daisy-api
-cqwanyue server
