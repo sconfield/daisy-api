@@ -7,5 +7,5 @@ import com.sconfield.daisy.model.Customer;
 
 @Repository
 public interface CustomerDao extends MongoRepository<Customer, String> {
-
+	
 }

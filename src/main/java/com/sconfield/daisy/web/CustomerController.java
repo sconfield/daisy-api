@@ -1,5 +1,7 @@
 package com.sconfield.daisy.web;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,6 +38,11 @@ public class CustomerController {
 	@GetMapping(value="/customer/{id}")
 	public Customer queryOne(@PathVariable String id) {
 		return customerService.getById(id);
+	}
+	
+	@GetMapping(value="/customer/page/{currentPage}")
+	public List<Customer> queryPage(@PathVariable Integer currentPage) {
+		return customerService.getByPage(currentPage);
 	}
 	
 }
